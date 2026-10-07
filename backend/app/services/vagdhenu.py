@@ -174,5 +174,5 @@ def generate_chant(text: list[str]):
 
     return {
         "job_id": job_id,
-        "audio_path":str(audio_file)
+        "audio_url":f"/audio/{job_id}.wav"
     }
