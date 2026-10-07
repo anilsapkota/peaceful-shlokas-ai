@@ -166,3 +166,13 @@ def generate_chant(text: list[str]):
     print("Return code:", result.returncode)
     print("Output:", result.stdout)
     print("Error:", result.stderr)
+
+    if not audio_file.exists():
+        raise RuntimeError(
+            f"Vagdhenu failed to generate audio.\n{result.stdout}\n{result.stderr}"
+        )
+
+    return {
+        "job_id": job_id,
+        "audio_path":str(audio_file)
+    }
