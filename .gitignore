@@ -34,3 +34,7 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Node.js / Vite
+node_modules/
+dist/
